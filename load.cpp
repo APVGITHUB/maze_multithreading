@@ -18,14 +18,11 @@ int get_maze(int* in_x, int* in_y,int row,int col){
         return 0;
     }
 
-    // Asigna una matriz con la dimensión leída del archivo
     maze_map.resize(row);
     for (i = 0; i < row; i++){
         maze_map[i].resize(col);
     }
     
-    
-    // Copia la matriz del archivo a la matriz asignada
     string t;
     for(i=0; i < row; i++){
         getline(file,t);
