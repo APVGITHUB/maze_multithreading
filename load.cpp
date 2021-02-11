@@ -1,14 +1,9 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <stdlib.h>
-#include <thread>
 #include <vector>
 
 using namespace std;
-
-// extern int row = 25;
-// extern int col = 100;
 
 extern vector<vector<char>> maze_map;
 
