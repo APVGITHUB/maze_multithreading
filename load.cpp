@@ -39,16 +39,12 @@ int get_maze(int* in_x, int* in_y,int row,int col){
     for(i=0; i < row; i++){
         getline(file,t);
         for(j=0; j< col; j++){
-            // cout<<"EL VALor T"+t<<endl;
-            // cout<<i<<endl;
-            // cout<<j<<endl;
             maze_map[i][j]=t[j];
             if(maze_map[i][j] == 'I'){
                 *in_x = i;
                 *in_y = j;
             }
         }
-        cout<<endl;
     }
 
     file.close();
