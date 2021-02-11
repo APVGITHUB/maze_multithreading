@@ -1,12 +1,8 @@
 #include <iostream>
-#include <stdlib.h>
 #include <thread>
 #include <vector>
 #include "utils.h"
 using namespace std;
-
-#define upperLimit 0
-#define leftLimit 0
 
 int row = 25;
 int col = 100;

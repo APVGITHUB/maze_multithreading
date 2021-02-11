@@ -12,8 +12,6 @@ void output(){
 
     int i,j;
     while(!found_exit){
-        this_thread::sleep_for(chrono::milliseconds(50));
-		
         for(i=0; i < row; i++){
             for(j=0; j< col; j++){
                 cout << maze_map[i][j];
@@ -21,5 +19,6 @@ void output(){
             cout << "\n";
         }
         cout << "\n\n";
+        this_thread::sleep_for(chrono::milliseconds(50));
     }
 }
