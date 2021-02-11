@@ -15,7 +15,7 @@ void threading_map(bool* cur_thread, int* nextY, int* nextX, vector<vector<char>
             *nextY = newWayY;
             *nextX = newWayX;
         }else{
-            //Crea un nuevo hilo en la nueva dirección
+            //Create new thread in new direction
             thread newthreading_map(maze_actions,newWayY,newWayX);
             newthreading_map.detach();
         }

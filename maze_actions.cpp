@@ -1,7 +1,4 @@
-#include <string>
 #include <iostream>
-#include <fstream>
-#include <stdlib.h>
 #include <thread>
 #include <vector>
 #include "utils.h"
@@ -23,7 +20,7 @@ void maze_actions(int y, int x){
 
 	maze_map[y][x] = 'o';
 
-	std::this_thread::sleep_for(std::chrono::milliseconds(200));
+	this_thread::sleep_for(chrono::milliseconds(200));
 
     // Variaveis para fazer com que a thread atual continue em seu caminho
 	bool cur_thread = false;

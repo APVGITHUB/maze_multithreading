@@ -12,14 +12,14 @@ void output(){
 
     int i,j;
     while(!found_exit){
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        this_thread::sleep_for(chrono::milliseconds(50));
 		
         for(i=0; i < row; i++){
             for(j=0; j< col; j++){
-                std::cout << maze_map[i][j];
+                cout << maze_map[i][j];
             }
-            std::cout << "\n";
+            cout << "\n";
         }
-        std::cout << "\n\n";
+        cout << "\n\n";
     }
 }

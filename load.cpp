@@ -14,7 +14,7 @@ int get_maze(int* in_x, int* in_y,int row,int col){
 
     file.open("labyrinth.txt");
     if(!file.good()){
-        std::cout << "Error when opening file";
+        cout << "Error when opening file";
         return 0;
     }
 
