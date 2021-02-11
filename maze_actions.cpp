@@ -21,7 +21,7 @@ void maze_actions(int y, int x){
         found_exit = true;
     }
 
-	maze_map[y][x] =  'o';
+	maze_map[y][x] = 'o';
 
 	std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
@@ -31,16 +31,16 @@ void maze_actions(int y, int x){
 
     // Test actions
     if(y > 0){
-        wayAhead(&cur_thread, &nextY, &nextX, maze_map, y-1, x);
+        threading_map(&cur_thread, &nextY, &nextX, maze_map, y-1, x);
     }
 	if((y+1) < row){
-        wayAhead(&cur_thread, &nextY, &nextX, maze_map, y+1, x);
+        threading_map(&cur_thread, &nextY, &nextX, maze_map, y+1, x);
     }
     if(x > 0){
-        wayAhead(&cur_thread, &nextY, &nextX, maze_map, y, x-1);
+        threading_map(&cur_thread, &nextY, &nextX, maze_map, y, x-1);
     }
 	if((x+1) < col){
-        wayAhead(&cur_thread, &nextY, &nextX, maze_map, y, x+1);
+        threading_map(&cur_thread, &nextY, &nextX, maze_map, y, x+1);
     }
     if(cur_thread){
         maze_actions(nextY,nextX);
