@@ -1,2 +1,2 @@
 # maze_multithreading
-Solving maze problem using multithreading and parallel algorithms
+Solving maze problem using multithreading and parallel programming
