@@ -29,25 +29,20 @@ void maze_actions(int y, int x){
 	bool cur_thread = false;
     int nextY, nextX;
 
-    // Prueba las posibles rutas
+    // Test actions
     if(y > 0){
-        // Para cima
         wayAhead(&cur_thread, &nextY, &nextX, maze_map, y-1, x);
     }
 	if((y+1) < row){
-        // Para baixo
         wayAhead(&cur_thread, &nextY, &nextX, maze_map, y+1, x);
     }
     if(x > 0){
-        // Para a esquerda
         wayAhead(&cur_thread, &nextY, &nextX, maze_map, y, x-1);
     }
 	if((x+1) < col){
-	    // Para direita
         wayAhead(&cur_thread, &nextY, &nextX, maze_map, y, x+1);
     }
     if(cur_thread){
-        // Continua no mesmo caminho, sem criar uma nova thread.
         maze_actions(nextY,nextX);
     }
     // Path drawing
