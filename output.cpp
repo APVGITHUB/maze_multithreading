@@ -1,10 +1,6 @@
-#include <string>
 #include <iostream>
-#include <fstream>
-#include <stdlib.h>
-#include <thread>
 #include <vector>
-#include "utils.h"
+
 using namespace std;
 
 extern vector<vector<char>> maze_map;
